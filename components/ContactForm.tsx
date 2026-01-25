@@ -12,8 +12,9 @@ const ContactForm: React.FC = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Simulate form submission
-    console.log('Form submitted:', formData);
+    const { name, email, subject, message } = formData;
+    const mailtoLink = `mailto:sharma.sc.kota@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`)}`;
+    window.location.href = mailtoLink;
     setSubmitted(true);
     setTimeout(() => setSubmitted(false), 5000);
   };
