@@ -13,33 +13,31 @@ const Navbar: React.FC = () => {
   }, []);
 
   return (
-    <nav className={`fixed w-full z-50 transition-all duration-500 ${isScrolled ? 'bg-white/95 backdrop-blur-md shadow-xl py-3' : 'bg-transparent py-7'}`}>
+    <nav className={`fixed w-full z-50 transition-all duration-500 ${isScrolled ? 'bg-white/95 backdrop-blur-md shadow-xl py-3 border-b border-slate-100' : 'bg-transparent py-7'}`}>
       <div className="max-w-7xl mx-auto px-6 lg:px-8 flex justify-between items-center">
         <a href="#" className="flex items-center gap-4 group">
           <div className="relative">
-            {/* Architectural Industrial Logo */}
-            <div className={`w-12 h-12 flex items-center justify-center rounded-xl transition-all duration-500 transform group-hover:scale-110 ${isScrolled ? 'bg-slate-900 shadow-lg shadow-slate-200' : 'bg-white shadow-2xl shadow-black/20 group-hover:bg-orange-600'}`}>
+            <div className={`w-12 h-12 flex items-center justify-center rounded-xl transition-all duration-500 transform group-hover:scale-110 shadow-lg ${isScrolled ? 'bg-slate-900 text-white' : 'bg-white text-slate-900 border border-slate-200'}`}>
               <svg 
-                className={`w-7 h-7 transition-colors duration-300 ${isScrolled ? 'text-white' : 'text-slate-900 group-hover:text-white'}`}
+                className="w-7 h-7"
                 viewBox="0 0 24 24" 
                 fill="none" 
                 stroke="currentColor" 
-                strokeWidth="2" 
+                strokeWidth="2.5" 
                 strokeLinecap="round" 
                 strokeLinejoin="round"
               >
-                <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
-                <polyline points="9 22 9 12 15 12 15 22" />
-                <circle cx="12" cy="7" r="1" fill="currentColor" className="text-orange-500" />
+                <path d="M2 20h20M7 20v-5a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v5" />
+                <path d="M10 13V9a2 2 0 0 1 2-2h0a2 2 0 0 1 2 2v4" />
+                <path d="M14 7V4a1 1 0 0 0-1-1h-2a1 1 0 0 0-1 1v3" />
               </svg>
             </div>
-            {/* Floating accent */}
-            <div className="absolute -top-1 -right-1 w-3 h-3 bg-orange-500 rounded-full border-2 border-white animate-pulse"></div>
+            <div className="absolute -top-1 -right-1 w-3 h-3 bg-orange-500 rounded-full border-2 border-white"></div>
           </div>
           
-          <div className={`flex flex-col leading-none transition-colors duration-300 ${isScrolled ? 'text-slate-900' : 'text-white'}`}>
-            <span className="text-xl font-black tracking-tighter uppercase font-inter">S.C. Sharma</span>
-            <span className="text-[9px] uppercase tracking-[0.4em] font-bold opacity-60">Industrial Consulting</span>
+          <div className="flex flex-col leading-none text-slate-900">
+            <span className="text-xl font-black tracking-tighter uppercase">S.C. Sharma</span>
+            <span className="text-[9px] uppercase tracking-[0.4em] font-bold opacity-60">Consulting Engineer</span>
           </div>
         </a>
 
@@ -48,7 +46,7 @@ const Navbar: React.FC = () => {
             <a
               key={item}
               href={`#${item.toLowerCase()}`}
-              className={`text-[11px] font-bold uppercase tracking-[0.25em] transition-all duration-300 relative group/link ${isScrolled ? 'text-slate-500 hover:text-slate-900' : 'text-white/80 hover:text-white'}`}
+              className={`text-[11px] font-bold uppercase tracking-[0.25em] transition-all duration-300 relative group/link text-slate-600 hover:text-slate-900`}
             >
               {item}
               <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-orange-500 transition-all duration-300 group-hover/link:w-full"></span>
@@ -56,10 +54,10 @@ const Navbar: React.FC = () => {
           ))}
           <a
             href="#contact"
-            className={`px-8 py-3.5 rounded-full text-[10px] font-black uppercase tracking-widest transition-all duration-300 shadow-2xl active:scale-95 ${
+            className={`px-8 py-3.5 rounded-2xl text-[10px] font-black uppercase tracking-widest transition-all duration-300 shadow-xl active:scale-95 ${
               isScrolled 
-                ? 'bg-orange-600 text-white shadow-orange-600/30 hover:bg-orange-700 hover:-translate-y-0.5' 
-                : 'bg-white text-slate-900 hover:bg-orange-600 hover:text-white hover:-translate-y-0.5'
+                ? 'bg-orange-600 text-white hover:bg-orange-700 shadow-orange-600/20' 
+                : 'bg-slate-900 text-white hover:bg-orange-600 shadow-slate-900/10'
             }`}
           >
             Start Project
