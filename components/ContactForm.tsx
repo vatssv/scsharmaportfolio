@@ -13,7 +13,7 @@ const ContactForm: React.FC = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     const { name, email, subject, message } = formData;
-    const mailtoLink = `mailto:sharma.sc.kota@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`)}`;
+    const mailtoLink = `mailto:scsharma.dsd@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`)}`;
     window.location.href = mailtoLink;
     setSubmitted(true);
     setTimeout(() => setSubmitted(false), 5000);
@@ -37,7 +37,7 @@ const ContactForm: React.FC = () => {
               </div>
               <div>
                 <div className="text-sm text-slate-400 uppercase tracking-widest">Email Address</div>
-                <div className="text-lg font-semibold">sharma.sc.kota@gmail.com</div>
+                <div className="text-lg font-semibold">scsharma.dsd@gmail.com</div>
               </div>
             </div>
             
