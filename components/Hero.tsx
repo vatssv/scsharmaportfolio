@@ -1,5 +1,6 @@
-
 import React from 'react';
+// @ts-ignore
+import profileImg from '../profile.jpg';
 
 const Hero: React.FC = () => {
   return (
@@ -56,12 +57,20 @@ const Hero: React.FC = () => {
               {/* Image Frame */}
               <div className="relative h-full w-full overflow-hidden rounded-[2.5rem] shadow-2xl border-[12px] border-white bg-white">
                 <img 
-                  src="profile.jpg" 
+                  src={profileImg} 
                   alt="Suresh Chandra Sharma" 
                   className="w-full h-full object-cover transition-all duration-700 group-hover:scale-105"
                   onError={(e) => {
                     const target = e.target as HTMLImageElement;
-                    target.src = "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80&w=800"; 
+                    // Fallback to the known public path on GitHub Pages if the module import fails
+                    if (!target.src.includes('unsplash')) {
+                      // Note: We use the repo name 'scsharmaportfolio' as part of the path for GH Pages
+                      target.src = "/scsharmaportfolio/profile.jpg";
+                      // Final fallback to a placeholder if the file is missing or path is wrong
+                      target.onerror = () => {
+                        target.src = "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80&w=800";
+                      };
+                    }
                   }}
                 />
                 
