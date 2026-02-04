@@ -7,7 +7,7 @@ const Certifications: React.FC = () => {
     'QIPM Specialist',
     'Technical Trainer at RTC',
     'Fellow of Institution of Engineers',
-    'Chartered Engineer Status'
+    'Chartered Engineers'
   ];
 
   return (
@@ -38,8 +38,8 @@ const Certifications: React.FC = () => {
             </h3>
             <div className="space-y-6">
               <div>
-                <div className="text-orange-500 font-bold text-sm uppercase tracking-wider mb-1">Bachelor of Engineering (Mechanical)</div>
-                <div className="text-xl font-semibold">MBM Engineering College, Jodhpur</div>
+                <div className="text-orange-500 font-bold text-sm uppercase tracking-wider mb-1">1977-1982 | B.E. Mechanical Eng. (Merit Holder)</div>
+                <div className="text-xl font-semibold">Government Engineering College, Jabalpur</div>
                 <div className="text-slate-400">Mechanical Engineering, First Division</div>
               </div>
               <div className="pt-6 border-t border-slate-800">

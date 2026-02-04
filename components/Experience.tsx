@@ -8,19 +8,18 @@ const experienceData: ExperienceItem[] = [
     period: '2022 - 2024',
     company: 'DCM Shriram',
     location: 'Bharuch, Gujarat',
-    role: 'Lead Project Engineer',
+    role: 'Project Lead / Engineer',
     image: 'https://images.unsplash.com/photo-1513828583688-c52646db42da?auto=format&fit=crop&q=80&w=800',
     description: [
-      'Led end-to-end setup of alkali and chemical plant (100 Cr. budget).',
-      'Coordinated cross-functional teams for engineering, procurement, and construction.',
-      'Ensured timely, within-budget completion and cost-effective procurement.'
+      'Led end-to-end setup of alkali and chemical plant, from initial planning to full operational status and coordinated with cross-functional teams including engineering, procurement, and construction to ensure timely and within-budget project completion.',
+      'Managed a budget of 100 Cr. and ensured cost-effective procurement of materials and services.'
     ]
   },
   {
     id: '2',
     period: '2020 - Present',
     company: 'Consultancy Engagements',
-    role: 'Senior Industrial Consultant',
+    role: 'Consultant',
     image: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=800',
     description: [
       'Strategic advisor for Shanti Gears Ltd. (Gearbox 3R’s).',
@@ -30,26 +29,46 @@ const experienceData: ExperienceItem[] = [
   },
   {
     id: '3',
-    period: 'General Manager Tenure',
+    period: '05/1992 - Present',
     company: 'DCM Shriram Limited, Kota',
     role: 'General Manager O&M',
     image: 'https://images.unsplash.com/photo-1565043589221-1a6fd9ae45c7?auto=format&fit=crop&q=80&w=800',
     description: [
-      'Directed operations of crusher, Raw mill, kiln, and cement mill.',
-      'Increased production by 25% through innovative O&M strategies.',
-      'Reduced specific energy consumption by 20 units per ton.'
+      'Directed operations of crusher, Raw mill, kiln, and cement mill and packing.',
+      'Increased production by 25% and specific energy consumption reduced by 20 units per ton.'
     ]
   },
   {
     id: '4',
-    period: 'Nihon Nirmaan Ltd.',
-    company: 'White Cement Division',
+    period: '08/1989 - 05/1992',
+    company: 'Nihon Nirmaan Ltd. (White Cement)',
     role: 'Maintenance & Operations Head',
     image: 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&q=80&w=800',
     description: [
-      'Managed Cement Division as a standalone profit center.',
-      'Oversear erection, commissioning, and plant optimization.',
-      'Established one of the most efficient white cement plants in the region.'
+      'Managed Cement Division as a profit center.',
+      'Joined at the project negotiation stage which involved various stages of erection, commissioning, operation and optimization and plant as one of the most efficient white cement.'
+    ]
+  },
+  {
+    id: '5',
+    period: '11/1984 - 08/1989',
+    company: 'ACC Ltd',
+    role: 'Sr Plant Engineer',
+    image: 'https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&q=80&w=800', // Placeholder image
+    description: [
+      'Joined as a Junior Engineer. Set up MIPS, Central Main team head.'
+    ]
+  },
+  {
+    id: '6',
+    period: '09/1982 - 10/1984',
+    company: 'JK Cement Works Nimbahera Raj',
+    role: 'Asstt Mechanical Engineer',
+    image: 'https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&q=80&w=800', // Placeholder image
+    description: [
+      'Maintenance and operations of raw mill feeding section of three kiln from silo extraction to klin.',
+      'Got associated with Productivity Optimization activities. Trainer to exhibit technical training on multiple topics.',
+      'Identified areas for improvement in the existing plant in kiln feed section for three units and initiated action in implementing changes.'
     ]
   }
 ];

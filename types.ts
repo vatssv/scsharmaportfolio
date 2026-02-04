@@ -11,7 +11,7 @@ export interface ExperienceItem {
 
 export interface SkillCategory {
   category: string;
-  skills: { name: string; level: number }[];
+  skills: { name: string; level?: number }[];
 }
 
 export interface Certificate {

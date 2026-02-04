@@ -7,27 +7,42 @@ const skillCategories: SkillCategory[] = [
     category: 'Project Management',
     skills: [
       { name: 'Green Field Projects', level: 100 },
-      { name: 'Erection & Commissioning', level: 95 },
+      { name: 'Project Management', level: 90 },
       { name: 'Cement Plant Management', level: 98 },
-      { name: 'Budget Control (100 Cr+)', level: 90 }
+      { name: 'Erection', level: 95 },
+      { name: 'Commissioning', level: 95 },
+      { name: 'Problem Solving', level: 90 },
+      { name: 'Kiln Alignment', level: 95 },
+      { name: 'Main Drive Alignment', level: 90 }
     ]
   },
   {
     category: 'Technical Maintenance',
     skills: [
-      { name: 'Kiln & Drive Alignment', level: 95 },
+      { name: 'Troubleshooting', level: 96 },
       { name: 'Root Cause Analysis', level: 92 },
-      { name: 'TPM & Continuous Improvement', level: 88 },
-      { name: 'Troubleshooting', level: 96 }
+      { name: 'MTTR', level: 90 },
+      { name: 'MTBF', level: 90 },
+      { name: 'Preventive Maintenance', level: 90 },
+      { name: 'Predictive Maintenance', level: 90 },
+      { name: 'Continuous Improvement', level: 90 },
+      { name: 'TPM', level: 90 }
     ]
   },
   {
-    category: 'Software & Core Skills',
+    category: 'Software & Tools',
     skills: [
-      { name: 'SAP ERP', level: 85 },
-      { name: 'Production Optimization', level: 94 },
-      { name: 'Resource Management', level: 90 },
-      { name: 'Technical Training', level: 95 }
+      { name: 'SAP ERP', level: 90 },
+      { name: 'Power Point', level: 90 },
+      { name: 'Microsoft Word', level: 90 },
+      { name: 'Microsoft Excel', level: 95 }
+    ]
+  },
+  {
+    category: 'Languages',
+    skills: [
+      { name: 'Hindi' },
+      { name: 'English' }
     ]
   }
 ];
@@ -44,19 +59,22 @@ const Skills: React.FC = () => {
             </h3>
             <div className="space-y-6">
               {cat.skills.map((skill, sIdx) => (
-                <div key={sIdx}>
-                  <div className="flex justify-between mb-2">
-                    <span className="text-sm font-medium text-slate-700">{skill.name}</span>
-                    <span className="text-sm font-bold text-orange-600">{skill.level}%</span>
-                  </div>
-                  <div className="w-full bg-slate-100 h-2 rounded-full overflow-hidden">
-                    <div 
-                      className="bg-orange-500 h-full rounded-full" 
-                      style={{ width: `${skill.level}%` }}
-                    />
-                  </div>
-                </div>
-              ))}
+                                <div key={sIdx}>
+                                  <div className="flex justify-between mb-2">
+                                    <span className="text-sm font-medium text-slate-700">{skill.name}</span>
+                                    {skill.level !== undefined && (
+                                      <span className="text-sm font-bold text-orange-600">{skill.level}%</span>
+                                    )}
+                                  </div>
+                                  {skill.level !== undefined && (
+                                    <div className="w-full bg-slate-100 h-2 rounded-full overflow-hidden">
+                                      <div
+                                        className="bg-orange-500 h-full rounded-full"
+                                        style={{ width: `${skill.level}%` }}
+                                      />
+                                    </div>
+                                  )}
+                                </div>              ))}
             </div>
           </div>
         ))}
